@@ -1,1 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |contact|}}
+      <tr>
+        <td>{{contact.nameFirst}}</td>
+        <td>{{contact.nameLast}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.twitter}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 {{outlet}}
