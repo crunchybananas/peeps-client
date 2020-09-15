@@ -5,6 +5,7 @@
       <th>Last Name</th>
       <th>Email</th>
       <th>Twitter</th>
+      <th>Phone Numbers</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,13 @@
         <td>{{contact.nameLast}}</td>
         <td>{{contact.email}}</td>
         <td>{{contact.twitter}}</td>
+        <td>
+          {{#each contact.phoneNumbers as |phoneNumber|}}
+            {{phoneNumber.name}}
+            {{phoneNumber.phoneNumber}}
+            <br>
+          {{/each}}
+        </td>
       </tr>
     {{/each}}
   </tbody>

@@ -5,6 +5,6 @@ export default class ContactsRoute extends Route {
   @service store;
 
   async model() {
-    return this.store.findAll('contact');
+    return this.store.findAll('contact', { include: 'phone-numbers' });
   }
 }
