@@ -1,29 +1,35 @@
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Twitter</th>
-      <th>Phone Numbers</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each model as |contact|}}
-      <tr>
-        <td>{{contact.nameFirst}}</td>
-        <td>{{contact.nameLast}}</td>
-        <td>{{contact.email}}</td>
-        <td>{{contact.twitter}}</td>
-        <td>
-          {{#each contact.phoneNumbers as |phoneNumber|}}
-            {{phoneNumber.name}}
-            {{phoneNumber.phoneNumber}}
-            <br>
-          {{/each}}
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
-{{outlet}}
+<div class="row">
+  <div class="column">
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Twitter</th>
+          <th>Phone Numbers</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |contact|}}
+          <tr {{on "click" (fn this.goto contact)}}>
+            <td>{{contact.nameFirst}}</td>
+            <td>{{contact.nameLast}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.twitter}}</td>
+            <td>
+              {{#each contact.phoneNumbers as |phoneNumber|}}
+                {{phoneNumber.name}}
+                {{phoneNumber.phoneNumber}}
+                <br>
+              {{/each}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="column">
+    {{outlet}}
+  </div>
+</div>
