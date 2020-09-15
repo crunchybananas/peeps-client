@@ -8,8 +8,8 @@ export default class ContactsViewController extends Controller {
       await contact.save();
     } catch (e) {
       alert(e);
-    } finally {
-      alert('record saved');
+      return;
     }
+    alert('record saved');
   }
 }

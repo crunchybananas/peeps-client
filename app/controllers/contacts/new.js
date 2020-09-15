@@ -11,9 +11,9 @@ export default class ContactsNewController extends Controller {
       await contact.save();
     } catch (e) {
       alert(e);
-    } finally {
-      alert('record created');
-      this.router.transitionTo('contacts.view', contact.id);
+      return;
     }
+    alert('record created');
+    this.router.transitionTo('contacts.view', contact.id);
   }
 }

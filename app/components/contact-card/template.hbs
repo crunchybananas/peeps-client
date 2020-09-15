@@ -1,3 +1,11 @@
 <Input type="text" @value={{@model.nameFirst}} />
 <Input type="text" @value={{@model.nameLast}} />
+<Input type="text" @value={{@model.twitter}} />
+<Input type="text" @value={{@model.email}} />
+
+{{#each @model.phoneNumbers as |phoneNumber|}}
+  <Input type="text" @value={{phoneNumber.name}} />
+  <Input type="text" @value={{phoneNumber.phoneNumber}} />
+  <br>
+{{/each}}
 <button {{on "click" (fn @onSave @model)}}>Save</button>
