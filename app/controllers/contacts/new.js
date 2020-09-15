@@ -5,8 +5,7 @@ import { inject as service } from '@ember/service';
 export default class ContactsNewController extends Controller {
   @service router;
 
-  @action
-  async save(contact) {
+  @action async save(contact) {
     try {
       await contact.save();
     } catch (e) {
