@@ -1,2 +1,2 @@
-export { default } from '@ember-data/adapters/json-api';
+export { default } from '@ember-data/adapter/json-api';
 
