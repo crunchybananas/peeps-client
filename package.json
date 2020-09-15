@@ -35,6 +35,8 @@
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.0",
     "ember-data": "~3.21.0",
+    "ember-ella-sparse": "^0.16.0",
+    "ember-ella-treadmill": "^0.21.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.2",
     "ember-load-initializers": "^2.1.1",
