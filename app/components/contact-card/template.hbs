@@ -1,0 +1,3 @@
+<Input type="text" @value={{@model.nameFirst}} />
+<Input type="text" @value={{@model.nameLast}} />
+<button {{on "click" (fn @onSave @model)}}>Save</button>
