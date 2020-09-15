@@ -12,4 +12,9 @@ export default class ContactsViewController extends Controller {
     }
     alert('record saved');
   }
+
+  @action
+  addPhone(contact) {
+    alert('add a phone');
+  }
 }

@@ -3,6 +3,7 @@
 <Input type="text" @value={{@model.twitter}} />
 <Input type="text" @value={{@model.email}} />
 
+<button {{on "click" (fn @onAddPhone @model)}}>Add Phone</button>
 {{#each @model.phoneNumbers as |phoneNumber|}}
   <Input type="text" @value={{phoneNumber.name}} />
   <Input type="text" @value={{phoneNumber.phoneNumber}} />
