@@ -3,6 +3,8 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+A front end demo application for the JSON Resource API demo app [Peeps](https://github.com/cerebris/peeps).
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
