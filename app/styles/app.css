@@ -11,3 +11,8 @@
   flex-basis: 100%;
   flex: 1;
 }
+
+.ella-container {
+  height: 10rem;
+  overflow: auto;
+}

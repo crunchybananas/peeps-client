@@ -6,13 +6,11 @@ export default class ContactsController extends Controller {
   @service router;
   @service store;
 
-  @action
-  goto(contact) {
+  @action goto(contact) {
     this.router.transitionTo('contacts.view', contact.id);
   }
 
-  @action
-  async add() {
+  @action async add() {
     this.router.transitionTo('contacts.new');
   }
 }

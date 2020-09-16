@@ -3,34 +3,25 @@
 </div>
 <div class="row">
   <div class="column">
-    <table>
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Twitter</th>
-          <th>Phone Numbers</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each model as |contact|}}
-          <tr {{on "click" (fn this.goto contact)}}>
-            <td>{{contact.nameFirst}}</td>
-            <td>{{contact.nameLast}}</td>
-            <td>{{contact.email}}</td>
-            <td>{{contact.twitter}}</td>
-            <td>
-              {{#each contact.phoneNumbers as |phoneNumber|}}
-                {{phoneNumber.name}}
-                {{phoneNumber.phoneNumber}}
-                <br>
-              {{/each}}
-            </td>
-          </tr>
-        {{/each}}
-      </tbody>
-    </table>
+    <div class="ella-container">
+      <EllaTreadmill
+        @content={{model}}
+        @minColumnWidth="100%"
+        @row="40" as |item|
+      >
+        <div {{on "click" (fn this.goto item.content)}}>
+          {{item.nameFirst}}
+          {{item.nameLast}}
+          {{item.email}}
+          {{item.twitter}}
+          <br>
+          {{#each item.phoneNumbers as |phoneNumber|}}
+            {{phoneNumber.name}}
+            {{phoneNumber.phoneNumber}}
+          {{/each}}
+        </div>
+      </EllaTreadmill>
+    </div>
   </div>
   <div class="column">
     {{outlet}}
